@@ -1,0 +1,55 @@
+body > section {
+  width: 1000px;
+  max-width: 100%;
+  margin: 2.5rem auto 3rem;
+  background-color: transparent;
+  border: 0;
+  overflow: hidden;
+}
+
+.aside,
+.main {
+  background-color: white;
+  border: 1px solid #dbd8d8;
+}
+
+.aside {
+  width: 220px;
+  float: left;
+  padding: 1.5rem;
+}
+
+.aside ul {
+  list-style: none;
+}
+
+.aside li + li {
+  margin-top: 0.75rem;
+}
+
+.aside a {
+  text-decoration: none;
+}
+
+.main {
+  margin-left: 236px;
+  padding: 1.75rem;
+  text-align: center;
+}
+
+.main h1 {
+  margin-bottom: 0.75rem;
+  font-size: 1.8rem;
+}
+
+.main p {
+  max-width: 38rem;
+  margin: 0 auto;
+}
+
+video {
+  width: 100%;
+  max-width: 680px;
+  border: 1px solid #d9d6d6;
+  background-color: black;
+}

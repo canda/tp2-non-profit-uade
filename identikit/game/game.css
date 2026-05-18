@@ -1,0 +1,133 @@
+main {
+  width: 720px;
+  max-width: 100%;
+  height: 420px;
+  margin: 2.5rem auto 3rem;
+  padding: 2rem 1rem;
+  position: relative;
+  background-color: #efefe9;
+  border: 1px solid #dddcdc;
+  border-radius: 20px;
+}
+
+.button {
+  display: block;
+  position: absolute;
+  width: 92px;
+  height: 92px;
+  border-radius: 50%;
+  border: 2px solid rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  transition: transform 0.15s ease;
+}
+
+.button:hover,
+.button:focus-visible {
+  transform: scale(1.08);
+}
+
+.button.red {
+  background-color: #d15a5a;
+  left: 120px;
+  top: 160px;
+}
+
+.button.green {
+  background-color: #5b9d69;
+  left: 50%;
+  top: 60px;
+  margin-left: -46px;
+}
+
+.button.blue {
+  background-color: #5781c3;
+  right: 120px;
+  top: 160px;
+}
+
+.button.yellow {
+  background-color: #d7be4e;
+  left: 50%;
+  bottom: 60px;
+  margin-left: -46px;
+}
+
+.initialAnimation .red {
+  animation: initialScaleAnimation 1s ease-in-out;
+}
+
+.initialAnimation .green {
+  animation: initialScaleAnimation 1s ease-in-out 1s;
+}
+
+.initialAnimation .yellow {
+  animation: initialScaleAnimation 1s ease-in-out 2s;
+}
+
+.initialAnimation .blue {
+  animation: initialScaleAnimation 1s ease-in-out 3s;
+}
+
+.active {
+  animation: activeScaleAnimation 1s ease-in-out;
+}
+
+@keyframes initialScaleAnimation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.7);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes activeScaleAnimation {
+  0% {
+    transform: scale(1.08);
+  }
+  50% {
+    transform: scale(1.7);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.game-over {
+  width: 100%;
+  max-width: 360px;
+  padding: 2rem;
+  text-align: center;
+  background-color: white;
+  border: 1px solid #dddbdb;
+  border-radius: 16px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.game-result {
+  height: auto;
+  min-height: 320px;
+  text-align: center;
+}
+
+.game-result .game-over {
+  margin-top: 5rem;
+}
+
+.game-over h2,
+.game-over h3 {
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+}
+
+.game-over a {
+  display: inline-block;
+  padding: 0.65rem 1rem;
+  text-decoration: none;
+  border: 1px solid #d2d2d2;
+  border-radius: 999px;
+}
