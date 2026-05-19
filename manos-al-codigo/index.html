@@ -4,13 +4,20 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Manos al Código</title>
+    <link rel="icon" href="logo.png" type="image/png" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <header class="site-header">
       <nav class="nav" aria-label="Navegación principal">
         <a class="brand" href="#inicio" aria-label="Ir al inicio">
-          <span class="brand-mark">M</span>
+          <img
+            class="brand-logo"
+            src="logo.png"
+            width="2048"
+            height="2048"
+            alt=""
+          />
           <span>Manos al Código</span>
         </a>
 
@@ -27,7 +34,9 @@
       <section id="inicio" class="hero section">
         <div class="hero-content">
           <p class="eyebrow">Educación tecnológica para crear futuro</p>
-          <h1>Acercamos la tecnología a jóvenes que quieren aprender haciendo.</h1>
+          <h1>
+            Acercamos la tecnología a jóvenes que quieren aprender haciendo.
+          </h1>
           <p class="hero-text">
             Manos al Código brinda talleres gratuitos de programación, robótica
             y pensamiento creativo para jóvenes de 12 a 18 años en comunidades
@@ -49,18 +58,6 @@
           fetchpriority="high"
           alt="Jóvenes argentinos trabajando en equipo en un taller comunitario de tecnología"
         />
-        <!--
-          Título de imagen: Hero principal - taller de tecnología comunitaria
-          Archivo usado: hero-taller-tecnologia.png
-
-          Prompt para Gemini:
-          Crear una imagen horizontal para la portada de una ONG llamada "Manos al Código".
-          Escena: jóvenes argentinos de entre 12 y 18 años trabajando en equipo en un taller comunitario de tecnología, con notebooks, placas Arduino, cables, sensores, piezas de robótica simples, cuadernos con bocetos y una persona facilitadora acompañando sin ocupar el centro. Debe transmitir aprendizaje práctico, curiosidad, colaboración, empoderamiento y esperanza. La tecnología tiene que verse accesible y cercana, no futurista ni corporativa.
-          Estética visual: fotografía documental editorial luminosa, realista, cálida y optimista, con luz natural entrando por ventanas, colores cohesivos en azul petróleo, verde menta, blanco cálido, gris claro y acentos coral. Composición moderna, limpia y humana, con foco en las manos construyendo y programando. Profundidad de campo suave, alto detalle, pieles naturales, ropa casual, ambiente educativo barrial cuidado y ordenado.
-          Composición específica para este sitio: la imagen va a colocarse dentro de una tarjeta visual a la derecha del texto, no como fondo con texto encima. Usar todo el ancho del encuadre con contenido natural, sin dejar franjas vacías blancas o paredes lisas. Ubicar el punto de interés principal en el centro y ligeramente hacia la derecha: manos, prototipo y notebook. Dejar solo aire visual natural en los bordes superiores y laterales, integrado al aula, para que la imagen no se sienta apretada. No reservar espacio para texto dentro de la imagen.
-          Evitar: estética de banco de imágenes, robots futuristas, hologramas, pantallas exageradas, fondos oscuros, poses artificiales, logos visibles, texto legible en pantallas, posters o cuadernos, marcas comerciales visibles, franjas vacías artificiales, watermark o íconos de generación.
-          Formato: 16:10, apta para hero web responsive en layout dividido texto + imagen.
-        -->
       </section>
 
       <section id="quienes-somos" class="section about-section">
@@ -88,9 +85,9 @@
             <article class="info-panel">
               <h3>Visión</h3>
               <p>
-                Un mundo donde todos los jóvenes, sin importar su origen,
-                tengan la oportunidad de aprender, crear y transformar su
-                realidad a través de la tecnología.
+                Un mundo donde todos los jóvenes, sin importar su origen, tengan
+                la oportunidad de aprender, crear y transformar su realidad a
+                través de la tecnología.
               </p>
             </article>
 
@@ -113,21 +110,10 @@
               loading="lazy"
               alt="Grupo de jóvenes argentinos aprendiendo programación y robótica en un taller"
             />
-            <!--
-              Título de imagen: Quiénes somos - aprendizaje práctico en taller
-              Archivo usado: quienes-somos-taller.png
-
-              Prompt para Gemini:
-              Crear una imagen vertical para la sección "Quiénes somos" de la ONG Manos al Código.
-              Escena: grupo pequeño de jóvenes argentinos en una mesa de trabajo comunitaria, probando un prototipo simple con sensores, una placa electrónica y una notebook abierta con código visible de manera abstracta, sin texto legible. Una facilitadora o facilitador acompaña desde un costado, señalando una conexión o haciendo una pregunta, con una actitud cercana y motivadora. La escena debe mostrar aprendizaje activo, manos tocando componentes, colaboración y concentración alegre.
-              Estética visual: fotografía documental realista, cálida, luminosa y coherente con una identidad educativa social. Paleta azul petróleo, verde menta, blanco cálido, gris suave y pequeños acentos coral en objetos o ropa. Iluminación natural, contraste suave, composición limpia, fondo de aula-taller barrial ordenado, materiales accesibles sobre la mesa. Debe sentirse humano, posible y local.
-              Evitar: laboratorio de alta tecnología, estética futurista, pantallas con texto legible, marcas comerciales, gestos exagerados, imagen demasiado corporativa, fondos recargados.
-              Formato: 4:5, centrado en las personas y las manos, apto para acompañar texto en una página web.
-            -->
           </div>
         </div>
 
-        <div class="values-grid" aria-label="Valores de Manos al Código">
+        <div class="values-list" aria-label="Valores de Manos al Código">
           <article class="value-card">
             <span>01</span>
             <h3>Inclusión</h3>
@@ -140,8 +126,8 @@
             <span>02</span>
             <h3>Empoderamiento</h3>
             <p>
-              Actividades prácticas que ayudan a ganar confianza y comprobar
-              que crear tecnología también es posible desde su realidad.
+              Actividades prácticas que ayudan a ganar confianza y comprobar que
+              crear tecnología también es posible desde su realidad.
             </p>
           </article>
           <article class="value-card">
@@ -168,27 +154,34 @@
           <p class="eyebrow">Donar</p>
           <h2>Tu aporte convierte curiosidad en oportunidades concretas.</h2>
           <p>
-            Cada donación ayuda a sostener talleres, comprar materiales,
-            renovar kits de robótica, acompañar proyectos finales y abrir nuevas
-            sedes comunitarias.
+            Cada donación ayuda a sostener talleres, comprar materiales, renovar
+            kits de robótica, acompañar proyectos finales y abrir nuevas sedes
+            comunitarias.
           </p>
 
           <div class="impact-list">
             <article>
-              <strong>$5.000</strong>
+              <strong>$20.000</strong>
+              <span
+                >kit de electrónica para un proyecto de robótica inicial</span
+              >
+            </article>
+            <article>
+              <strong>$60.000</strong>
               <span>materiales electrónicos para una práctica grupal</span>
             </article>
             <article>
-              <strong>$12.000</strong>
-              <span>un kit de sensores para proyectos de robótica inicial</span>
-            </article>
-            <article>
-              <strong>$25.000</strong>
-              <span>beca parcial para que un joven complete un ciclo de talleres</span>
+              <strong>$150.000</strong>
+              <span
+                >beca parcial para que un joven complete un ciclo completo de
+                talleres</span
+              >
             </article>
           </div>
 
-          <a class="button primary-button" href="mailto:donaciones@manosalcodigo.org"
+          <a
+            class="button primary-button"
+            href="mailto:donaciones@manosalcodigo.org"
             >Contactar para donar</a
           >
         </div>
@@ -215,7 +208,7 @@
           </p>
         </div>
 
-        <div class="projects-grid">
+        <div class="projects-list">
           <article class="project-card">
             <img
               class="content-image project-image"
@@ -225,17 +218,6 @@
               loading="lazy"
               alt="Jóvenes presentando un prototipo simple de robótica comunitaria"
             />
-            <!--
-              Título de imagen: Proyecto - prototipos de robótica para el barrio
-              Archivo usado: proyecto-robotica-barrio.png
-
-              Prompt para Gemini:
-              Crear una imagen para tarjeta de proyecto de la ONG Manos al Código.
-              Escena: dos o tres jóvenes argentinos presentando un prototipo simple de robótica comunitaria sobre una mesa, por ejemplo un pequeño sistema con ruedas, sensores o luces LED, construido con materiales accesibles. Deben verse orgullosos y concentrados, con otros compañeros mirando alrededor de manera natural. La imagen tiene que comunicar logro, aprendizaje práctico y trabajo en equipo.
-              Estética visual: fotografía documental editorial, luminosa, realista, cálida y optimista. Usar la misma identidad visual de la web: azul petróleo, verde menta, blanco cálido, gris claro y acentos coral. Fondo de aula-taller comunitaria, limpio y no recargado. Enfoque en el prototipo y las manos, con rostros visibles en segundo plano. Textura real, nada de estética futurista.
-              Evitar: logos, texto dentro de la imagen, robots humanoides, laboratorio avanzado, poses demasiado actuadas, saturación excesiva.
-              Formato: 4:3, pensado para una card de proyecto en sitio web.
-            -->
             <div class="project-content">
               <span class="project-tag">Robótica inicial</span>
               <h3>Prototipos para el barrio</h3>
@@ -247,6 +229,9 @@
                 Resultado: 18 prototipos presentados en escuelas y centros
                 barriales.
               </p>
+              <a class="project-link" href="proyecto-robotica-barrio.html"
+                >Ver proyecto</a
+              >
             </div>
           </article>
 
@@ -259,17 +244,6 @@
               loading="lazy"
               alt="Jóvenes trabajando en parejas en un proyecto de programación web"
             />
-            <!--
-              Título de imagen: Proyecto - mi primera página web
-              Archivo usado: proyecto-programacion-web.png
-
-              Prompt para Gemini:
-              Crear una imagen para tarjeta de proyecto de programación web de Manos al Código.
-              Escena: jóvenes argentinos trabajando en parejas frente a notebooks, diseñando una página web simple para contar una causa de su comunidad. Se pueden ver bocetos en papel, notas adhesivas, wireframes dibujados y pantallas con bloques de interfaz sin texto legible. Debe sentirse como una clase activa y colaborativa, con entusiasmo tranquilo.
-              Estética visual: fotografía realista documental, luz natural, tonos consistentes con la marca: azul petróleo, verde menta, blanco cálido, gris claro y acentos coral. Composición limpia, moderna y cercana, con foco en la colaboración y el proceso creativo. Debe integrarse visualmente con imágenes de educación tecnológica social.
-              Evitar: oficinas corporativas, monitores gigantes, texto legible en pantallas, estética oscura de hacker, poses artificiales, elementos de lujo.
-              Formato: 4:3, encuadre horizontal para card web.
-            -->
             <div class="project-content">
               <span class="project-tag">Programación web</span>
               <h3>Mi primera página</h3>
@@ -281,6 +255,9 @@
                 Historia: los sitios finales se comparten con familias y
                 organizaciones del barrio.
               </p>
+              <a class="project-link" href="proyecto-programacion-web.html"
+                >Ver proyecto</a
+              >
             </div>
           </article>
 
@@ -293,28 +270,21 @@
               loading="lazy"
               alt="Muestra comunitaria donde jóvenes presentan proyectos tecnológicos"
             />
-            <!--
-              Título de imagen: Proyecto - muestra comunitaria de soluciones
-              Archivo usado: proyecto-muestra-comunitaria.png
-
-              Prompt para Gemini:
-              Crear una imagen para tarjeta de proyecto de cierre comunitario de Manos al Código.
-              Escena: muestra barrial de proyectos tecnológicos donde jóvenes argentinos presentan sus prototipos a familias, docentes y vecinos. Debe haber mesas con proyectos simples, notebooks, carteles sin texto legible y personas escuchando con interés. La emoción principal debe ser orgullo compartido, comunidad y futuro posible.
-              Estética visual: fotografía documental editorial, cálida, luminosa, humana y realista. Mantener coherencia con toda la web: azul petróleo, verde menta, blanco cálido, gris suave y acentos coral. Composición amplia pero ordenada, con sensación de encuentro comunitario, aprendizaje y celebración sobria.
-              Evitar: escenario de conferencia corporativa, multitudes enormes, luces dramáticas, carteles con texto legible, estética publicitaria artificial.
-              Formato: 4:3, apto para tarjeta de proyecto y recorte responsive.
-            -->
             <div class="project-content">
               <span class="project-tag">Comunidad</span>
               <h3>Muestra de soluciones</h3>
               <p>
                 Evento de cierre donde los grupos comparten sus aprendizajes,
-                presentan sus prototipos y celebran sus avances con la comunidad.
+                presentan sus prototipos y celebran sus avances con la
+                comunidad.
               </p>
               <p class="project-result">
                 Impacto: más jóvenes se animan a sumarse al siguiente ciclo de
                 talleres.
               </p>
+              <a class="project-link" href="proyecto-muestra-comunitaria.html"
+                >Ver proyecto</a
+              >
             </div>
           </article>
         </div>
