@@ -4,20 +4,27 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mi primera página | Manos al Código</title>
-    <link rel="icon" href="logo.png" type="image/png" />
+    <link rel="icon" href="assets/img/logo-80.png" type="image/png" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <header class="site-header">
       <nav class="nav" aria-label="Navegación principal">
         <a class="brand" href="index.html#inicio" aria-label="Ir al inicio">
-          <img
-            class="brand-logo"
-            src="logo.png"
-            width="2048"
-            height="2048"
-            alt=""
-          />
+          <picture class="brand-logo-frame">
+            <source
+              type="image/webp"
+              srcset="assets/img/logo-40.webp 1x, assets/img/logo-80.webp 2x"
+            />
+            <img
+              class="brand-logo"
+              src="assets/img/logo-40.png"
+              srcset="assets/img/logo-40.png 1x, assets/img/logo-80.png 2x"
+              width="40"
+              height="40"
+              alt=""
+            />
+          </picture>
           <span>Manos al Código</span>
         </a>
 
@@ -50,13 +57,32 @@
           </div>
         </div>
 
-        <img
-          class="content-image detail-image"
-          src="proyecto-programacion-web.png"
-          width="2400"
-          height="1792"
-          alt="Jóvenes trabajando en parejas en un proyecto de programación web"
-        />
+        <picture class="image-frame detail-image">
+          <source
+            type="image/webp"
+            srcset="
+              assets/img/proyecto-programacion-web-480.webp   480w,
+              assets/img/proyecto-programacion-web-720.webp   720w,
+              assets/img/proyecto-programacion-web-1080.webp 1080w,
+              assets/img/proyecto-programacion-web-1840.webp 1840w
+            "
+            sizes="(max-width: 600px) 90vw, (max-width: 992px) 92vw, 556px"
+          />
+          <img
+            class="content-image"
+            src="assets/img/proyecto-programacion-web-1080.png"
+            srcset="
+              assets/img/proyecto-programacion-web-480.png   480w,
+              assets/img/proyecto-programacion-web-720.png   720w,
+              assets/img/proyecto-programacion-web-1080.png 1080w,
+              assets/img/proyecto-programacion-web-1840.png 1840w
+            "
+            sizes="(max-width: 600px) 90vw, (max-width: 992px) 92vw, 556px"
+            width="2400"
+            height="1792"
+            alt="Jóvenes trabajando en parejas en un proyecto de programación web"
+          />
+        </picture>
       </section>
 
       <section class="section detail-summary">

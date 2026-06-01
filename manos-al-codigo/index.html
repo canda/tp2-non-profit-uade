@@ -4,20 +4,26 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Manos al Código</title>
-    <link rel="icon" href="logo.png" type="image/png" />
+    <link rel="icon" href="assets/img/logo-80.png" type="image/png" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <header class="site-header">
       <nav class="nav" aria-label="Navegación principal">
         <a class="brand" href="#inicio" aria-label="Ir al inicio">
-          <img
-            class="brand-logo"
-            src="logo.png"
-            width="2048"
-            height="2048"
-            alt=""
-          />
+          <picture class="brand-logo">
+            <source
+              type="image/webp"
+              srcset="assets/img/logo-40.webp 1x, assets/img/logo-80.webp 2x"
+            />
+            <img
+              src="assets/img/logo-40.png"
+              srcset="assets/img/logo-40.png 1x, assets/img/logo-80.png 2x"
+              width="40"
+              height="40"
+              alt=""
+            />
+          </picture>
           <span>Manos al Código</span>
         </a>
 
@@ -50,14 +56,33 @@
           </div>
         </div>
 
-        <img
-          class="content-image hero-image"
-          src="hero-taller-tecnologia.png"
-          width="2624"
-          height="1632"
-          fetchpriority="high"
-          alt="Jóvenes argentinos trabajando en equipo en un taller comunitario de tecnología"
-        />
+        <picture class="image-frame hero-image">
+          <source
+            type="image/webp"
+            srcset="
+              assets/img/hero-taller-tecnologia-640.webp   640w,
+              assets/img/hero-taller-tecnologia-960.webp   960w,
+              assets/img/hero-taller-tecnologia-1280.webp 1280w,
+              assets/img/hero-taller-tecnologia-1840.webp 1840w
+            "
+            sizes="(max-width: 600px) 90vw, (max-width: 992px) 92vw, 552px"
+          />
+          <img
+            class="content-image"
+            src="assets/img/hero-taller-tecnologia-960.png"
+            srcset="
+              assets/img/hero-taller-tecnologia-640.png   640w,
+              assets/img/hero-taller-tecnologia-960.png   960w,
+              assets/img/hero-taller-tecnologia-1280.png 1280w,
+              assets/img/hero-taller-tecnologia-1840.png 1840w
+            "
+            sizes="(max-width: 600px) 90vw, (max-width: 992px) 92vw, 552px"
+            width="2624"
+            height="1632"
+            fetchpriority="high"
+            alt="Jóvenes argentinos trabajando en equipo en un taller comunitario de tecnología"
+          />
+        </picture>
       </section>
 
       <section id="quienes-somos" class="section about-section">
@@ -102,14 +127,33 @@
           </div>
 
           <div>
-            <img
-              class="content-image about-image"
-              src="quienes-somos-taller.png"
-              width="1856"
-              height="2304"
-              loading="lazy"
-              alt="Grupo de jóvenes argentinos aprendiendo programación y robótica en un taller"
-            />
+            <picture class="image-frame about-image">
+              <source
+                type="image/webp"
+                srcset="
+                  assets/img/quienes-somos-taller-640.webp   640w,
+                  assets/img/quienes-somos-taller-960.webp   960w,
+                  assets/img/quienes-somos-taller-1280.webp 1280w,
+                  assets/img/quienes-somos-taller-1840.webp 1840w
+                "
+                sizes="(max-width: 600px) 90vw, (max-width: 992px) 92vw, 560px"
+              />
+              <img
+                class="content-image"
+                src="assets/img/quienes-somos-taller-960.png"
+                srcset="
+                  assets/img/quienes-somos-taller-640.png   640w,
+                  assets/img/quienes-somos-taller-960.png   960w,
+                  assets/img/quienes-somos-taller-1280.png 1280w,
+                  assets/img/quienes-somos-taller-1840.png 1840w
+                "
+                sizes="(max-width: 600px) 90vw, (max-width: 992px) 92vw, 560px"
+                width="1856"
+                height="2304"
+                loading="lazy"
+                alt="Grupo de jóvenes argentinos aprendiendo programación y robótica en un taller"
+              />
+            </picture>
           </div>
         </div>
 
@@ -210,14 +254,33 @@
 
         <div class="projects-list">
           <article class="project-card">
-            <img
-              class="content-image project-image"
-              src="proyecto-robotica-barrio.png"
-              width="2400"
-              height="1792"
-              loading="lazy"
-              alt="Jóvenes presentando un prototipo simple de robótica comunitaria"
-            />
+            <picture class="image-frame project-image">
+              <source
+                type="image/webp"
+                srcset="
+                  assets/img/proyecto-robotica-barrio-480.webp   480w,
+                  assets/img/proyecto-robotica-barrio-720.webp   720w,
+                  assets/img/proyecto-robotica-barrio-1080.webp 1080w,
+                  assets/img/proyecto-robotica-barrio-1840.webp 1840w
+                "
+                sizes="(max-width: 600px) 90vw, (max-width: 992px) 45vw, 372px"
+              />
+              <img
+                class="content-image"
+                src="assets/img/proyecto-robotica-barrio-720.png"
+                srcset="
+                  assets/img/proyecto-robotica-barrio-480.png   480w,
+                  assets/img/proyecto-robotica-barrio-720.png   720w,
+                  assets/img/proyecto-robotica-barrio-1080.png 1080w,
+                  assets/img/proyecto-robotica-barrio-1840.png 1840w
+                "
+                sizes="(max-width: 600px) 90vw, (max-width: 992px) 45vw, 372px"
+                width="2400"
+                height="1792"
+                loading="lazy"
+                alt="Jóvenes presentando un prototipo simple de robótica comunitaria"
+              />
+            </picture>
             <div class="project-content">
               <span class="project-tag">Robótica inicial</span>
               <h3>Prototipos para el barrio</h3>
@@ -236,14 +299,33 @@
           </article>
 
           <article class="project-card">
-            <img
-              class="content-image project-image"
-              src="proyecto-programacion-web.png"
-              width="2400"
-              height="1792"
-              loading="lazy"
-              alt="Jóvenes trabajando en parejas en un proyecto de programación web"
-            />
+            <picture class="image-frame project-image">
+              <source
+                type="image/webp"
+                srcset="
+                  assets/img/proyecto-programacion-web-480.webp   480w,
+                  assets/img/proyecto-programacion-web-720.webp   720w,
+                  assets/img/proyecto-programacion-web-1080.webp 1080w,
+                  assets/img/proyecto-programacion-web-1840.webp 1840w
+                "
+                sizes="(max-width: 600px) 90vw, (max-width: 992px) 45vw, 372px"
+              />
+              <img
+                class="content-image"
+                src="assets/img/proyecto-programacion-web-720.png"
+                srcset="
+                  assets/img/proyecto-programacion-web-480.png   480w,
+                  assets/img/proyecto-programacion-web-720.png   720w,
+                  assets/img/proyecto-programacion-web-1080.png 1080w,
+                  assets/img/proyecto-programacion-web-1840.png 1840w
+                "
+                sizes="(max-width: 600px) 90vw, (max-width: 992px) 45vw, 372px"
+                width="2400"
+                height="1792"
+                loading="lazy"
+                alt="Jóvenes trabajando en parejas en un proyecto de programación web"
+              />
+            </picture>
             <div class="project-content">
               <span class="project-tag">Programación web</span>
               <h3>Mi primera página</h3>
@@ -262,14 +344,33 @@
           </article>
 
           <article class="project-card">
-            <img
-              class="content-image project-image"
-              src="proyecto-muestra-comunitaria.png"
-              width="2400"
-              height="1792"
-              loading="lazy"
-              alt="Muestra comunitaria donde jóvenes presentan proyectos tecnológicos"
-            />
+            <picture class="image-frame project-image">
+              <source
+                type="image/webp"
+                srcset="
+                  assets/img/proyecto-muestra-comunitaria-480.webp   480w,
+                  assets/img/proyecto-muestra-comunitaria-720.webp   720w,
+                  assets/img/proyecto-muestra-comunitaria-1080.webp 1080w,
+                  assets/img/proyecto-muestra-comunitaria-1840.webp 1840w
+                "
+                sizes="(max-width: 600px) 90vw, (max-width: 992px) 92vw, 372px"
+              />
+              <img
+                class="content-image"
+                src="assets/img/proyecto-muestra-comunitaria-720.png"
+                srcset="
+                  assets/img/proyecto-muestra-comunitaria-480.png   480w,
+                  assets/img/proyecto-muestra-comunitaria-720.png   720w,
+                  assets/img/proyecto-muestra-comunitaria-1080.png 1080w,
+                  assets/img/proyecto-muestra-comunitaria-1840.png 1840w
+                "
+                sizes="(max-width: 600px) 90vw, (max-width: 992px) 92vw, 372px"
+                width="2400"
+                height="1792"
+                loading="lazy"
+                alt="Muestra comunitaria donde jóvenes presentan proyectos tecnológicos"
+              />
+            </picture>
             <div class="project-content">
               <span class="project-tag">Comunidad</span>
               <h3>Muestra de soluciones</h3>

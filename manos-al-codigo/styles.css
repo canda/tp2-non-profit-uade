@@ -65,9 +65,11 @@ ul {
 .brand-logo {
   width: 4rem;
   height: 4rem;
-  display: block;
-  object-fit: contain;
-  border-radius: 0.8rem;
+}
+
+.brand-logo img {
+  width: 4rem;
+  height: 4rem;
 }
 
 .nav-links {
@@ -204,11 +206,24 @@ p {
   outline: none;
 }
 
+.image-frame,
 .content-image {
   width: 100%;
   display: block;
-  object-fit: cover;
   border-radius: 0.8rem;
+}
+
+.image-frame {
+  overflow: hidden;
+}
+
+.content-image {
+  height: 100%;
+  object-fit: cover;
+}
+
+.image-frame .content-image {
+  border-radius: inherit;
 }
 
 .hero-image {
@@ -580,7 +595,7 @@ p {
     font-size: 1.55rem;
   }
 
-  .brand-logo {
+  .brand-logo-frame {
     width: 3.6rem;
     height: 3.6rem;
   }
