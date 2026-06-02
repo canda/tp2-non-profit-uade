@@ -32,6 +32,7 @@
           <li><a href="#quienes-somos">Quiénes somos</a></li>
           <li><a href="#donar">Donar</a></li>
           <li><a href="#proyectos">Proyectos</a></li>
+          <li><a href="#contacto">Contacto</a></li>
         </ul>
       </nav>
     </header>
@@ -389,6 +390,63 @@
             </div>
           </article>
         </div>
+      </section>
+
+      <section id="contacto" class="section contact-section">
+        <div class="contact-content">
+          <p class="eyebrow">Contacto</p>
+          <h2>¿Querés sumarte, donar materiales o acercar un taller?</h2>
+          <p>
+            Escribinos y contanos cómo te gustaría participar. Estamos abiertos
+            a nuevas ideas, colaboraciones y formas de sumar para seguir
+            creciendo juntos.
+          </p>
+
+          <div class="contact-list" aria-label="Canales de contacto">
+            <article>
+              <strong>Email</strong>
+              <span>hola@manosalcodigo.org</span>
+            </article>
+            <article>
+              <strong>Ubicación</strong>
+              <span>Buenos Aires, Argentina</span>
+            </article>
+          </div>
+        </div>
+
+        <form class="contact-form" aria-label="Formulario de contacto">
+          <div class="field-group">
+            <label for="nombre">Nombre</label>
+            <input
+              id="nombre"
+              name="nombre"
+              type="text"
+              placeholder="Tu nombre"
+            />
+          </div>
+
+          <div class="field-group">
+            <label for="email">Email</label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              placeholder="tu@email.com"
+            />
+          </div>
+
+          <div class="field-group">
+            <label for="mensaje">Mensaje</label>
+            <textarea
+              id="mensaje"
+              name="mensaje"
+              rows="5"
+              placeholder="Contanos en qué te gustaría colaborar"
+            ></textarea>
+          </div>
+
+          <button class="button primary-button" type="button">✉️ Enviar</button>
+        </form>
       </section>
     </main>
 

@@ -422,6 +422,106 @@ p {
   outline: none;
 }
 
+.contact-section {
+  display: flex;
+  align-items: flex-start;
+  gap: 4.8rem;
+}
+
+.contact-content,
+.contact-form {
+  flex: 1 1 0;
+}
+
+.contact-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2.2rem;
+}
+
+.contact-content > p {
+  max-width: 62rem;
+  font-size: 1.9rem;
+}
+
+.contact-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.4rem;
+}
+
+.contact-list article {
+  flex: 1 1 22rem;
+  border: 1px solid #d9e7e3;
+  border-radius: 0.8rem;
+  padding: 1.8rem;
+  background: #f4faf8;
+}
+
+.contact-list strong,
+.contact-list span {
+  display: block;
+}
+
+.contact-list strong {
+  margin-bottom: 0.4rem;
+  color: #004f55;
+  font-size: 1.5rem;
+}
+
+.contact-list span {
+  color: #5c6f73;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+  border: 1px solid #d9e7e3;
+  border-radius: 0.8rem;
+  padding: 3rem;
+  background: #ffffff;
+  box-shadow: 0 1.4rem 3.5rem rgba(12, 48, 54, 0.06);
+}
+
+.field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.field-group label {
+  color: #004f55;
+  font-size: 1.45rem;
+  font-weight: 900;
+}
+
+.field-group input,
+.field-group textarea {
+  width: 100%;
+  border: 1px solid #d9e7e3;
+  border-radius: 0.8rem;
+  padding: 1.3rem 1.4rem;
+  color: #17323b;
+  background: #fbfdfc;
+  font: inherit;
+}
+
+.field-group textarea {
+  resize: vertical;
+}
+
+.field-group input::placeholder,
+.field-group textarea::placeholder {
+  color: #8aa0a4;
+}
+
+.field-group input:focus,
+.field-group textarea:focus {
+  border-color: #006b68;
+  outline: 3px solid rgba(0, 107, 104, 0.14);
+}
+
 .detail-hero {
   display: flex;
   align-items: center;
@@ -553,13 +653,16 @@ p {
   }
 
   .split-layout,
-  .donate-section {
+  .donate-section,
+  .contact-section {
     flex-direction: column;
   }
 
   .split-layout > *,
   .donate-content,
-  .testimonial {
+  .testimonial,
+  .contact-content,
+  .contact-form {
     width: 100%;
     flex-basis: auto;
   }
@@ -646,7 +749,8 @@ p {
 
   .hero-text,
   .section-heading p,
-  .donate-content > p {
+  .donate-content > p,
+  .contact-content > p {
     font-size: 1.7rem;
   }
 
@@ -666,13 +770,15 @@ p {
   .testimonial,
   .value-card,
   .project-content,
-  .detail-panel {
+  .detail-panel,
+  .contact-form {
     padding: 2rem;
   }
 
   .values-list,
   .projects-list,
-  .detail-summary {
+  .detail-summary,
+  .contact-list {
     flex-direction: column;
   }
 
