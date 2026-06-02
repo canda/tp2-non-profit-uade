@@ -180,6 +180,7 @@ p {
   border-radius: 0.8rem;
   padding: 0 2.2rem;
   font-weight: 900;
+  cursor: pointer;
 }
 
 .primary-button {
@@ -306,8 +307,19 @@ p {
   background: #e6f4ef;
 }
 
+.donate-landing {
+  min-height: 64rem;
+  display: flex;
+  align-items: center;
+  gap: 4.8rem;
+}
+
 .donate-content {
   flex: 1 1 0;
+}
+
+.donation-impact {
+  padding-top: 0;
 }
 
 .impact-list {
@@ -357,6 +369,56 @@ p {
 
 .testimonial span {
   color: #5c6f73;
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: 20;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background: rgba(23, 50, 59, 0.62);
+}
+
+.modal.active {
+  display: flex;
+}
+
+.modal-content {
+  width: min(100%, 52rem);
+  border-radius: 0.8rem;
+  padding: 3rem;
+  background: #ffffff;
+  box-shadow: 0 2rem 5rem rgba(12, 48, 54, 0.24);
+}
+
+.modal-close {
+  display: inline-flex;
+  min-height: 3.8rem;
+  align-items: center;
+  justify-content: center;
+  float: right;
+  border: 1px solid #d9e7e3;
+  border-radius: 0.8rem;
+  padding: 0 1.2rem;
+  color: #004f55;
+  background: #f4faf8;
+  font: inherit;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.modal-content h2 {
+  margin: 0.8rem 0 1rem;
+}
+
+.donation-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  margin-top: 2.2rem;
 }
 
 .projects-list {
@@ -654,6 +716,7 @@ p {
 
   .split-layout,
   .donate-section,
+  .donate-landing,
   .contact-section {
     flex-direction: column;
   }
@@ -667,7 +730,8 @@ p {
     flex-basis: auto;
   }
 
-  .donate-section {
+  .donate-section,
+  .donate-landing {
     padding: 7.6rem 2.4rem;
   }
 
@@ -792,8 +856,13 @@ p {
     flex-basis: auto;
   }
 
-  .donate-section {
+  .donate-section,
+  .donate-landing {
     padding: 5.8rem 1.6rem;
+  }
+
+  .modal-content {
+    padding: 2rem;
   }
 
   .impact-list article {

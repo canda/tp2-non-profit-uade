@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Donaciones | Manos al Código</title>
+    <link rel="icon" href="assets/img/logo-80.png" type="image/png" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav" aria-label="Navegación principal">
+        <a class="brand" href="index.html#inicio" aria-label="Ir al inicio">
+          <picture class="brand-logo">
+            <source
+              type="image/webp"
+              srcset="assets/img/logo-40.webp 1x, assets/img/logo-80.webp 2x"
+            />
+            <img
+              src="assets/img/logo-40.png"
+              srcset="assets/img/logo-40.png 1x, assets/img/logo-80.png 2x"
+              width="40"
+              height="40"
+              alt=""
+            />
+          </picture>
+          <span>Manos al Código</span>
+        </a>
+
+        <ul class="nav-links">
+          <li><a href="index.html#inicio">Inicio</a></li>
+          <li><a href="index.html#quienes-somos">Quiénes somos</a></li>
+          <li><a href="index.html#proyectos">Proyectos</a></li>
+          <li><a href="index.html#contacto">Contacto</a></li>
+          <li><a href="donaciones.html">Donar</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="section donate-landing">
+        <div class="donate-content">
+          <p class="eyebrow">Donar</p>
+          <h1>Tu aporte convierte curiosidad en oportunidades concretas.</h1>
+          <p class="hero-text">
+            Cada donación ayuda a sostener talleres, comprar materiales, renovar
+            kits de robótica, acompañar proyectos finales y abrir nuevas sedes
+            comunitarias.
+          </p>
+          <div class="hero-actions">
+            <button
+              class="button primary-button"
+              id="abrir-modal"
+              type="button"
+            >
+              Donar ahora
+            </button>
+            <a class="button secondary-button" href="index.html#proyectos"
+              >Ver proyectos</a
+            >
+          </div>
+        </div>
+
+        <aside class="testimonial" aria-label="Testimonio">
+          <p>
+            "Antes pensaba que programar era para otros. En el taller armé mi
+            primer sensor de luz y entendí que también puedo crear cosas que
+            ayuden a mi barrio."
+          </p>
+          <strong>Lucía, 16 años</strong>
+          <span>Participante del programa de prototipos</span>
+        </aside>
+      </section>
+
+      <section class="section donation-impact">
+        <div class="section-heading">
+          <p class="eyebrow">Impacto</p>
+          <h2>Elegí cómo querés acompañar el aprendizaje.</h2>
+          <p>
+            Los aportes se destinan a materiales, becas, conectividad y
+            acompañamiento docente para que más jóvenes puedan aprender
+            haciendo.
+          </p>
+        </div>
+
+        <div class="impact-list">
+          <article>
+            <strong>$20.000</strong>
+            <span>kit de electrónica para un proyecto de robótica inicial</span>
+          </article>
+          <article>
+            <strong>$60.000</strong>
+            <span>materiales electrónicos para una práctica grupal</span>
+          </article>
+          <article>
+            <strong>$150.000</strong>
+            <span
+              >beca parcial para que un joven complete un ciclo completo de
+              talleres</span
+            >
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <div class="modal" id="modal-donacion">
+      <div class="modal-content" role="dialog" aria-modal="true">
+        <button class="modal-close" id="cerrar-modal" type="button">
+          Cerrar
+        </button>
+        <p class="eyebrow">Donación</p>
+        <h2>Hacé tu aporte</h2>
+        <p>
+          Completá tus datos y nos contactamos para coordinar el medio de pago.
+        </p>
+
+        <form class="donation-form">
+          <div class="field-group">
+            <label for="donante">Nombre</label>
+            <input id="donante" name="donante" type="text" />
+          </div>
+          <div class="field-group">
+            <label for="email-donante">Email</label>
+            <input id="email-donante" name="email-donante" type="email" />
+          </div>
+          <div class="field-group">
+            <label for="monto">Monto</label>
+            <input id="monto" name="monto" type="text" placeholder="$20.000" />
+          </div>
+          <button class="button primary-button" type="button">
+            Enviar donación
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+      <p>Manos al Código</p>
+      <p>Democratizar el acceso a la educación tecnológica.</p>
+    </footer>
+
+    <script>
+      const modal = document.querySelector('#modal-donacion');
+      document.querySelector('#abrir-modal').onclick = () =>
+        modal.classList.add('active');
+      document.querySelector('#cerrar-modal').onclick = () =>
+        modal.classList.remove('active');
+
+      document.body.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') modal.classList.remove('active');
+      });
+    </script>
+  </body>
+</html>
