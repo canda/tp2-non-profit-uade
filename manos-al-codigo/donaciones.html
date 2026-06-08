@@ -123,6 +123,7 @@
         <p>
           Completá tus datos y nos contactamos para coordinar el medio de pago.
         </p>
+        <p class="modal-impact" id="mensaje-impacto" aria-live="polite"></p>
 
         <form class="donation-form">
           <div class="field-group">
@@ -161,12 +162,24 @@
                 $150.000
               </button>
             </div>
-            <input id="monto" name="monto" type="text" placeholder="$20.000" />
+            <input
+              id="monto"
+              name="monto"
+              type="text"
+              inputmode="numeric"
+              placeholder="$20.000"
+              value="$"
+            />
           </div>
-          <button class="button primary-button" type="button">
+          <button class="button primary-button" type="submit">
             Enviar donación
           </button>
         </form>
+        <p
+          class="donation-thanks"
+          id="mensaje-agradecimiento"
+          aria-live="polite"
+        ></p>
       </div>
     </div>
 
@@ -175,55 +188,6 @@
       <p>Democratizar el acceso a la educación tecnológica.</p>
     </footer>
 
-    <script>
-      const modal = document.querySelector('#modal-donacion');
-      const amountInput = document.querySelector('#monto');
-      const presetButtons = document.querySelectorAll('.preset-button');
-      const donationAmountButtons = document.querySelectorAll(
-        '[data-donation-amount]',
-      );
-
-      const updateSelectedPreset = (amount) => {
-        presetButtons.forEach((button) => {
-          const isSelected = button.dataset.donationAmount === amount;
-          button.classList.toggle('active', isSelected);
-          button.setAttribute('aria-pressed', isSelected);
-        });
-      };
-
-      const setDonationAmount = (amount) => {
-        amountInput.value = amount;
-        updateSelectedPreset(amount);
-      };
-
-      const openDonationModal = (amount) => {
-        if (amount) setDonationAmount(amount);
-        modal.classList.add('active');
-      };
-
-      document.querySelector('#abrir-modal').onclick = () =>
-        openDonationModal();
-
-      document.querySelector('#cerrar-modal').onclick = () =>
-        modal.classList.remove('active');
-
-      donationAmountButtons.forEach((button) => {
-        button.addEventListener('click', () => {
-          setDonationAmount(button.dataset.donationAmount);
-
-          if (button.classList.contains('impact-option')) {
-            modal.classList.add('active');
-          }
-        });
-      });
-
-      amountInput.addEventListener('input', () =>
-        updateSelectedPreset(amountInput.value),
-      );
-
-      document.body.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') modal.classList.remove('active');
-      });
-    </script>
+    <script src="donaciones.js"></script>
   </body>
 </html>

@@ -441,6 +441,19 @@ p {
   margin: 0.8rem 0 1rem;
 }
 
+.modal-impact {
+  margin-top: 1.6rem;
+  border-left: 4px solid #ff7a59;
+  padding: 1rem 1.2rem;
+  color: #17323b;
+  background: #fff6f2;
+  font-weight: 700;
+}
+
+.modal-impact:empty {
+  display: none;
+}
+
 .donation-form {
   display: flex;
   flex-direction: column;
@@ -473,6 +486,21 @@ p {
   color: #ffffff;
   background: #006b68;
   outline: none;
+}
+
+.donation-thanks {
+  display: none;
+  margin-top: 1.6rem;
+  border: 1px solid rgba(0, 107, 104, 0.18);
+  border-radius: 0.8rem;
+  padding: 1.2rem 1.4rem;
+  color: #004f55;
+  background: #e6f4ef;
+  font-weight: 800;
+}
+
+.donation-thanks.active {
+  display: block;
 }
 
 .projects-list {
