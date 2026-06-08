@@ -114,7 +114,10 @@ nav {
 }
 
 .button-links a {
-  display: block;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 1.6rem 2rem;
   background: #111;
   border: 0.2rem solid #111;
@@ -127,6 +130,13 @@ nav {
     background-color 0.2s,
     color 0.2s,
     transform 0.2s;
+}
+
+.button-links i {
+  position: absolute;
+  left: 2rem;
+  width: 2.4rem;
+  text-align: left;
 }
 
 .button-links a:hover {
