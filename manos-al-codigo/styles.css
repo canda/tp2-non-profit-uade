@@ -415,6 +415,9 @@ p {
 
 .modal-content {
   width: min(100%, 52rem);
+  max-height: calc(100vh - 4rem);
+  overflow: auto;
+  scroll-behavior: smooth;
   border-radius: 0.8rem;
   padding: 3rem;
   background: #ffffff;
@@ -486,6 +489,31 @@ p {
   color: #ffffff;
   background: #006b68;
   outline: none;
+}
+
+.subscription-note {
+  border: 1px solid rgba(0, 107, 104, 0.16);
+  border-radius: 0.8rem;
+  padding: 1rem 1.2rem;
+  color: #004f55;
+  background: #f4faf8;
+  font-size: 1.45rem;
+  font-weight: 800;
+}
+
+.payment-fields {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.4rem;
+}
+
+.payment-fields .field-group {
+  flex: 1 1 16rem;
+}
+
+.payment-card-number,
+.payment-card-name {
+  flex-basis: 100%;
 }
 
 .donation-thanks {

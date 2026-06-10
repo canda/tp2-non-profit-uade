@@ -9,28 +9,49 @@ const donationAmountButtons = document.querySelectorAll(
 );
 
 const defaultImpactMessage =
-  'Cada aporte suma horas de taller, materiales compartidos y más oportunidades para aprender haciendo.';
+  'Tu aporte mensual sostiene horas de taller, materiales compartidos y acompañamiento docente para que más jóvenes aprendan haciendo.';
 
 const amountMessages = [
   {
     min: 150000,
-    text: 'Con ese aporte ayudás a financiar una beca para que un joven complete un ciclo de talleres con seguimiento docente.',
+    getText: (amount) => {
+      const studentCount = Math.floor(amount / 150000);
+      const studentText =
+        studentCount === 1 ? 'un estudiante' : `${studentCount} estudiantes`;
+
+      return `Con tu aporte mensual sostenés la beca de ${studentText}: cupo en talleres, materiales, conectividad y seguimiento docente durante su recorrido.`;
+    },
   },
   {
     min: 60000,
-    text: 'Con ese aporte podemos comprar materiales electrónicos para una práctica grupal y que el aprendizaje sea bien concreto.',
+    getText: () =>
+      'Con tu aporte mensual financiás una práctica grupal completa con placas, sensores y componentes para aprender construyendo.',
   },
   {
     min: 20000,
-    text: 'Con ese aporte podemos armar un kit inicial para que un equipo empiece a crear su primer proyecto de robótica.',
+    getText: () =>
+      'Con tu aporte mensual ayudás a reponer componentes clave para que un equipo pueda armar y mejorar su primer prototipo.',
   },
   {
     min: 1,
-    text: defaultImpactMessage,
+    getText: () => defaultImpactMessage,
   },
 ];
 
 const normalizeAmount = (amount) => String(amount).replace(/[^\d]/g, '');
+
+const getCursorPositionAfterDigit = (value, digitCount) => {
+  if (digitCount === 0) return 1;
+
+  let digitsSeen = 0;
+
+  for (let index = 0; index < value.length; index += 1) {
+    if (/\d/.test(value[index])) digitsSeen += 1;
+    if (digitsSeen === digitCount) return index + 1;
+  }
+
+  return value.length;
+};
 
 const formatDonationAmount = (amount) => {
   const digits = normalizeAmount(amount);
@@ -45,7 +66,9 @@ const updateImpactMessage = (amount) => {
   const numericAmount = Number(digits);
   const match = amountMessages.find((message) => numericAmount >= message.min);
 
-  impactMessage.textContent = digits ? match?.text || defaultImpactMessage : '';
+  impactMessage.textContent = digits
+    ? match?.getText(numericAmount) || defaultImpactMessage
+    : '';
 };
 
 const updateSelectedPreset = (amount) => {
@@ -64,7 +87,8 @@ const clearThankYouMessage = () => {
 const setDonationAmount = (amount) => {
   const formattedAmount = formatDonationAmount(amount);
 
-  amountInput.value = formattedAmount;
+  if (formattedAmount !== amountInput.value)
+    amountInput.value = formattedAmount;
   updateSelectedPreset(formattedAmount);
   updateImpactMessage(formattedAmount);
   clearThankYouMessage();
@@ -93,11 +117,21 @@ donationAmountButtons.forEach((button) => {
 });
 
 amountInput.addEventListener('input', () => {
-  amountInput.value = formatDonationAmount(amountInput.value);
-  amountInput.setSelectionRange(
-    amountInput.value.length,
-    amountInput.value.length,
-  );
+  const cursorPosition = amountInput.selectionStart || 0;
+  const digitsBeforeCursor = normalizeAmount(
+    amountInput.value.slice(0, cursorPosition),
+  ).length;
+  const formattedAmount = formatDonationAmount(amountInput.value);
+
+  if (formattedAmount !== amountInput.value) {
+    amountInput.value = formattedAmount;
+    const nextCursorPosition = getCursorPositionAfterDigit(
+      formattedAmount,
+      digitsBeforeCursor,
+    );
+
+    amountInput.setSelectionRange(nextCursorPosition, nextCursorPosition);
+  }
   updateSelectedPreset(amountInput.value);
   updateImpactMessage(amountInput.value);
   clearThankYouMessage();
@@ -109,8 +143,9 @@ donationForm.addEventListener('submit', (event) => {
   const amount = amountInput.value.trim();
   const amountText = normalizeAmount(amount) ? ` de ${amount}` : '';
 
-  thankYouMessage.textContent = `Gracias por tu donación${amountText}. Tu ayuda se transforma en materiales, becas y nuevas oportunidades para aprender tecnología.`;
+  thankYouMessage.textContent = `Gracias por suscribirte al débito automático mensual${amountText}. Tu ayuda se transforma en talleres activos, materiales, becas y nuevas oportunidades para aprender tecnología.`;
   thankYouMessage.classList.add('active');
+  thankYouMessage.scrollIntoView({ block: 'nearest' });
 });
 
 document.body.addEventListener('keydown', (event) => {

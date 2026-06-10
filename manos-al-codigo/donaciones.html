@@ -43,9 +43,9 @@
           <p class="eyebrow">Donar</p>
           <h1>Tu aporte convierte curiosidad en oportunidades concretas.</h1>
           <p class="hero-text">
-            Cada donación ayuda a sostener talleres, comprar materiales, renovar
-            kits de robótica, acompañar proyectos finales y abrir nuevas sedes
-            comunitarias.
+            Con una donación mensual sostenés talleres gratuitos, becas,
+            materiales, conectividad y seguimiento docente para que más jóvenes
+            aprendan tecnología durante todo el ciclo.
           </p>
           <div class="hero-actions">
             <button
@@ -77,9 +77,9 @@
           <p class="eyebrow">Impacto</p>
           <h2>Elegí cómo querés acompañar el aprendizaje.</h2>
           <p>
-            Los aportes se destinan a materiales, becas, conectividad y
-            acompañamiento docente para que más jóvenes puedan aprender
-            haciendo.
+            Los montos sugeridos son mensuales y ayudan a planificar cada taller
+            con materiales listos, docentes presentes y proyectos que llegan a
+            terminarse.
           </p>
         </div>
 
@@ -90,7 +90,10 @@
             data-donation-amount="$20.000"
           >
             <strong>$20.000</strong>
-            <span>kit de electrónica para un proyecto de robótica inicial</span>
+            <span
+              >repone componentes para que un equipo construya su primer
+              prototipo de robótica</span
+            >
           </button>
           <button
             class="impact-option"
@@ -98,7 +101,10 @@
             data-donation-amount="$60.000"
           >
             <strong>$60.000</strong>
-            <span>materiales electrónicos para una práctica grupal</span>
+            <span
+              >financia una práctica grupal completa con sensores, placas y
+              materiales reutilizables</span
+            >
           </button>
           <button
             class="impact-option"
@@ -107,8 +113,8 @@
           >
             <strong>$150.000</strong>
             <span
-              >beca parcial para que un joven complete un ciclo completo de
-              talleres</span
+              >sostiene la beca de 1 estudiante con cupo en talleres, materiales
+              y seguimiento docente</span
             >
           </button>
         </div>
@@ -118,10 +124,10 @@
     <div class="modal" id="modal-donacion">
       <div class="modal-content" role="dialog" aria-modal="true">
         <button class="modal-close" id="cerrar-modal" type="button">X</button>
-        <p class="eyebrow">Donación</p>
+        <p class="eyebrow">Aporte mensual</p>
         <h2>Hacé tu aporte</h2>
         <p>
-          Completá tus datos y nos contactamos para coordinar el medio de pago.
+          Completá tus datos para suscribirte a un débito automático mensual.
         </p>
         <p class="modal-impact" id="mensaje-impacto" aria-live="polite"></p>
 
@@ -135,7 +141,7 @@
             <input id="email-donante" name="email-donante" type="email" />
           </div>
           <div class="field-group">
-            <label for="monto">Monto</label>
+            <label for="monto">Monto mensual</label>
             <div class="preset-list" aria-label="Montos sugeridos">
               <button
                 class="preset-button"
@@ -171,8 +177,57 @@
               value="$"
             />
           </div>
+          <p class="subscription-note">
+            Al enviar el formulario autorizás el débito automático mensual del
+            monto elegido. Podés pausarlo o cancelarlo cuando quieras.
+          </p>
+          <div class="payment-fields" aria-label="Datos de tarjeta">
+            <div class="field-group payment-card-number">
+              <label for="numero-tarjeta">Número de tarjeta</label>
+              <input
+                id="numero-tarjeta"
+                name="numero-tarjeta"
+                type="text"
+                inputmode="numeric"
+                autocomplete="cc-number"
+                placeholder="1234 1234 1234 1234"
+              />
+            </div>
+            <div class="field-group">
+              <label for="vencimiento-tarjeta">Vencimiento</label>
+              <input
+                id="vencimiento-tarjeta"
+                name="vencimiento-tarjeta"
+                type="text"
+                inputmode="numeric"
+                autocomplete="cc-exp"
+                placeholder="MM/AA"
+              />
+            </div>
+            <div class="field-group">
+              <label for="codigo-tarjeta">Código</label>
+              <input
+                id="codigo-tarjeta"
+                name="codigo-tarjeta"
+                type="text"
+                inputmode="numeric"
+                autocomplete="cc-csc"
+                placeholder="123"
+              />
+            </div>
+            <div class="field-group payment-card-name">
+              <label for="titular-tarjeta">Titular</label>
+              <input
+                id="titular-tarjeta"
+                name="titular-tarjeta"
+                type="text"
+                autocomplete="cc-name"
+                placeholder="Nombre como figura en la tarjeta"
+              />
+            </div>
+          </div>
           <button class="button primary-button" type="submit">
-            Enviar donación
+            Activar débito automático
           </button>
         </form>
         <p
