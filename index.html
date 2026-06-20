@@ -67,11 +67,40 @@
 
     <main class="profile-card">
       <header>
-        <img
-          class="avatar"
-          src="./profile-picture.png"
-          alt="Avatar de Javier Candalaft"
-        />
+        <picture>
+          <source
+            type="image/webp"
+            media="(max-width: 480px)"
+            srcset="
+              ./assets/img/profile-picture-100.webp 100w,
+              ./assets/img/profile-picture-200.webp 200w
+            "
+            sizes="100px"
+          />
+          <source
+            type="image/webp"
+            srcset="
+              ./assets/img/profile-picture-180.webp 180w,
+              ./assets/img/profile-picture-360.webp 360w
+            "
+            sizes="180px"
+          />
+          <img
+            class="avatar"
+            src="./assets/img/profile-picture-180.png"
+            srcset="
+              ./assets/img/profile-picture-100.png 100w,
+              ./assets/img/profile-picture-180.png 180w,
+              ./assets/img/profile-picture-200.png 200w,
+              ./assets/img/profile-picture-360.png 360w
+            "
+            sizes="(max-width: 480px) 100px, 180px"
+            width="180"
+            height="180"
+            alt="Avatar de Javier Candalaft"
+            decoding="async"
+          />
+        </picture>
         <h1>Javier Candalaft</h1>
         <h2>Desarrollo web inicial</h2>
         <ul class="social-links">
