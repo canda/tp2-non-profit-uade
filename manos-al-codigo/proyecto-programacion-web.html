@@ -5,11 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mi primera página | Manos al Código</title>
     <link rel="icon" href="assets/img/logo-80.png" type="image/png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <header class="site-header">
-      <nav class="nav" aria-label="Navegación principal">
+      <nav class="nav mobile-menu" aria-label="Navegación principal">
         <a class="brand" href="index.html#inicio" aria-label="Ir al inicio">
           <picture class="brand-logo-frame">
             <source
@@ -27,6 +31,15 @@
           </picture>
           <span>Manos al Código</span>
         </a>
+
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-label="Abrir menú"
+          aria-expanded="false"
+        >
+          <i class="fa-solid fa-bars" aria-hidden="true"></i>
+        </button>
 
         <ul class="nav-links">
           <li><a href="index.html#inicio">Inicio</a></li>
@@ -119,5 +132,7 @@
       <p>Manos al Código</p>
       <p>Democratizar el acceso a la educación tecnológica.</p>
     </footer>
+
+    <script src="menu.js"></script>
   </body>
 </html>
