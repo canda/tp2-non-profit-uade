@@ -1032,6 +1032,15 @@ p {
     flex-direction: column;
   }
 
+  .contact-list {
+    gap: 1rem;
+  }
+
+  .contact-list article {
+    flex: 0 1 auto;
+    padding: 1.5rem;
+  }
+
   .value-card {
     min-height: auto;
   }
